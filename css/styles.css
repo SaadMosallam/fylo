@@ -1,0 +1,407 @@
+/*---------------------------------------------------------------------------
+Global Declarations
+-----------------------------------------------------------------------------*/
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.btn-green{
+    border: none;
+    background-color: hsl(163, 95%, 43%);
+    color: white;
+    border-radius: 4px;
+}
+.btn-green:hover{
+    background-color: hsl(243, 87%, 12%);
+    transition: background-color .4s ease-in;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.7rem;
+}
+button{
+    outline: none;
+}
+/*---------------------------------------------------------------------------
+Header Declarations
+-----------------------------------------------------------------------------*/
+header{
+    background: linear-gradient(to right,hsl(243, 58%, 33%) 45%,hsl(243, 86%, 85%) 180%);
+    padding-bottom: 10rem;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+    display: grid;
+    justify-items: center;
+}
+header section{
+    width: 80%;
+}
+.head .btn-green{
+    padding: .5rem 1rem;
+}
+.head button:first-of-type{
+    padding: .5rem 1rem;
+    background-color: transparent;
+    transition: background-color .2s ease-in;
+}
+.head button:first-of-type:hover{
+    background-color: hsl(163, 95%, 43%);
+}
+header h1{
+    color: white;
+}
+header section button{
+    padding: 1rem 4rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+.header-container{
+    width: 90%;
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+    align-items: center;
+    grid-row-gap: 5rem;
+}
+.head{
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    grid-column-gap: .4rem;
+}
+.header-container section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: .7fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-self: stretch;
+}
+.header-container section img{
+    grid-column: 2;
+    grid-row: 1/3;
+    justify-self: end;
+    width: 60%;
+}
+.header-container section button{
+    width: max-content;
+    height: max-content;
+    align-self: start;
+}
+header h1{
+    align-self: end;
+    margin-bottom: 2rem;
+}
+/*---------------------------------------------------------------------------
+Main Declarations
+-----------------------------------------------------------------------------*/
+main h2,
+main h3{
+    color: hsl(243, 87%, 12%);
+    font-family: 'Open Sans', sans-serif;
+}
+main p{
+    color: hsl(0, 0%, 50%);
+}
+.join-section p{
+    color: hsl(243, 58%, 33%);
+}
+.join-section input{
+    outline: none;
+    padding: .7rem 2rem;
+    padding-right: 6rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 9px -2px rgba(184,184,184,1);
+}
+.join-section button{
+    padding: .7rem 4rem;
+    box-shadow: 2px 2px 4px 1px rgba(184,184,184,1);
+    border-radius: 4px;
+
+}
+main{
+    display: grid;
+    justify-items: center;
+}
+.main-container{
+    width: 90%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 5rem;
+}
+.features-section{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 6rem;
+    justify-items: center; 
+}
+.features-section h2{
+    grid-column: 1/4;
+    justify-self: center;
+    margin: 6rem auto;
+    font-size: 2rem
+}
+.features-section img{
+    grid-column: 1;
+    grid-row: 2/4;
+    max-width: 23rem;
+    align-self: center;
+}
+[class^="card"]{
+    text-justify: left;
+}
+.join-section{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+}
+.join-section h2{
+    font-size: 2rem;
+}
+.join-section p{
+    text-align: center;
+    font-weight: bold;
+    width: 40rem;
+    margin: 0 auto;
+    font-size: .85rem;
+}
+.input-card{
+    margin: 2rem 0;
+}
+/*---------------------------------------------------------------------------
+Footer Declarations
+-----------------------------------------------------------------------------*/
+footer{
+    display: grid;
+    justify-items: center;
+    padding-top: 11rem;
+    color: white;   
+    background-color:hsl(243, 87%, 12%);
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+}
+footer a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding-top: 1rem;
+    transition: color .2s ease-out;
+}
+footer a:hover{
+    color: hsl(163, 95%, 43%);
+}
+footer input{
+    outline: none;
+    border: none;
+    padding: .7rem 1rem;
+    border-radius: 3px;
+    width: 22rem;
+}
+footer button{
+    padding: .7rem 5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    justify-self: end;
+}
+footer .col-2 button:hover{
+    background-color: hsl(243, 58%, 33%);
+    transition: background-color .4s ease-in
+}
+.footer-container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr .1fr 2fr .1fr 1fr;
+    grid-column-gap: 3rem;
+    margin: 5rem 0; 
+}
+.col-1{
+    order: 1;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 2rem;
+}
+hr:first-of-type{
+    order: 2;
+}
+hr:nth-of-type(2){
+    order: 4;
+}
+.col-1 > img{
+    width: 10rem;
+}
+.col-1 section{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content;
+    align-items: center;
+}
+.col-1 section img{
+    margin-right: 1rem;
+}
+.col-2{
+    order: 5;
+}
+.col-2 section{
+    display: grid;
+    justify-items: center;  
+}
+.col-2 p{
+    width: 100%;
+    margin-top: 0;
+}
+.col-3{
+    order: 3;
+    /* border-right: 1px solid white;
+    border-left: 1px solid white; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.col-3 h2{
+    margin-top: 0;
+}
+/*---------------------------------------------------------------------------
+Smaller Screen Media Query
+-----------------------------------------------------------------------------*/
+@media screen and (max-width: 1220px){
+    html{
+        font-size: 24px;
+    }
+    h2{
+        margin: 1rem auto;
+        text-align: center;
+    }
+    header,
+    footer,
+    main{
+        width: 100%;
+    }
+    /*---------------------------------------------------------------------------
+    Header Declarations
+    -----------------------------------------------------------------------------*/
+    header{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);
+    }
+    .header-container{
+        grid-row-gap: 3rem;
+    }
+    .header-container section{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr .5fr .5fr;
+        align-items: center;
+        justify-self: stretch;
+        justify-items: center;
+        margin-bottom: 5rem; 
+    }
+    .header-container section img{
+        grid-column: 1;
+        grid-row: 1;
+        order: 1;
+        justify-self: center;
+    }
+    .header-container section h1{
+        /* width: 60%; */
+        font-size: 1.9rem;
+        text-align: center;
+        grid-column: 1;
+        grid-row: 2;
+        order: 2;
+    }
+    .header-container section button{
+        grid-column: 1;
+        grid-row: 3;
+        order: 3;
+        font-size: 1rem;
+        padding: 1rem 5rem;
+    }
+    /*---------------------------------------------------------------------------
+    Main Declarations
+    -----------------------------------------------------------------------------*/
+    .features-section{
+        grid-template-columns: minmax(2rem,1fr);
+        grid-template-rows: auto auto auto auto auto;
+    }
+    .features-section h2{
+        grid-column: 1;
+    }
+    .features-section img{
+        grid-column: 1;
+        grid-row: 2;
+        margin-bottom: 5rem;
+        width: 100%;
+    }
+    [class^="card"]{
+        text-align: left;
+    }
+    .input-card{
+        display: grid;
+        grid-row-gap: .7rem;
+    }
+    .input-card input{
+        width: 100%;
+        margin: 0;
+    } 
+    .join-section{
+        grid-template-columns: minmax(2rem,1fr);
+    } 
+    .join-section p{
+        width: 100%;
+    }
+    /*---------------------------------------------------------------------------
+    Footer Declarations
+    -----------------------------------------------------------------------------*/
+    footer{
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    }
+    .footer-container{
+        grid-template-columns: 1fr;
+        grid-column-gap: 3rem;
+        margin: 7rem 0;
+        grid-row-gap: 4rem;
+    }
+    footer input{
+        width: 100%;
+    }
+    footer button{
+        width: 50%;
+    }
+    hr{
+        display: none;
+    }
+    .col-2{
+        order: 2;
+    }
+    .col-3{
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem; 
+        justify-items: start;
+    }
+    .col-3 h2{
+        text-align: left;
+    }
+}
+@media screen and (max-width: 700px){
+    html{
+        font-size: 16px;
+    }
+    .header-container{
+        grid-row-gap: 2rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .header-container section img{
+        width: 80%;
+    }
+    .header-container{
+        grid-row-gap: 1rem;
+    }
+}
